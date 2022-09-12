@@ -7,8 +7,7 @@ public:
         int mx = 0;
         
         sort(tokens.begin(), tokens.end());
-        if(tokens.size() == 0) return 0;
-        if(power < tokens[0]) return 0;
+        if(tokens.size() == 0 || power < tokens[0]) return 0;
         int l = 0, r = tokens.size()-1;
         
         while(l<=r){
