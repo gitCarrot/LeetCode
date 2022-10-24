@@ -8,7 +8,7 @@ public:
         recur(arr, pos +1, length, BIT);
         for(char c : arr[pos]) {
             if(1 << (c - 'a') & BIT) return;
-            else BIT |= 1 << (c - 'a');
+            BIT |= 1 << (c - 'a');
         }
         recur(arr, pos +1, length + arr[pos].length() , BIT);
     }
