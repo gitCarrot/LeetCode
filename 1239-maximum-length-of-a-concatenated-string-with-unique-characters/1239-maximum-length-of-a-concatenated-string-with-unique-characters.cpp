@@ -1,7 +1,6 @@
 class Solution {
 public:
     int maxlength = 0;
-    
     int maxLength(vector<string>& arr) {
         function<void(int,int,int)> recur = [&](int p, int l, int BIT) -> void {
             if(p == arr.size()) {
