@@ -6,7 +6,6 @@ public:
         int sum = 0, presum = 0;
         for(int n : nums){
             sum = (sum + n) % k;
-            
             if(mods[sum]) return true;
             mods[presum]++;
             presum = sum;
