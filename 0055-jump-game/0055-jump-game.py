@@ -4,7 +4,6 @@ class Solution:
         @lru_cache(None)
         def canJump(idx):
             if idx == len(nums)-1: return True
-            pos = False
             if nums[idx] != 0:
                 for i in range(idx+1, min(idx+nums[idx]+1, len(nums))):
                     if canJump(i) : return True
